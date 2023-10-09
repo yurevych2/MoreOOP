@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ElfTest {
-    private Character character;
+    private Elf character;
 
     @BeforeEach
     public void init() {
@@ -18,9 +18,9 @@ public class ElfTest {
 
     @Test
     public void testKick() {
-        Hobbit hobbit = new Hobbit();
+        Elf hobbit = new Elf();
         character.kick(hobbit);
-        assertEquals(0, hobbit.getHp());
+        assertEquals(10, hobbit.getHp());
     }
 }
 

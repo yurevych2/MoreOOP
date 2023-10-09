@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter @AllArgsConstructor
-public abstract class Character {
+public abstract class MyCharacter {
     private int hp;
     private int power;
     private KickStrategy kickStrategy;
@@ -19,7 +19,7 @@ public abstract class Character {
         return this.getClass().getSimpleName() + "{hp=" + hp + ", power=" + power + "}";
     }
 
-    public void kick(Character c) {
+    public void kick(MyCharacter c) {
         kickStrategy.kick(this, c);
     }
 
